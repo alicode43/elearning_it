@@ -6,7 +6,7 @@ import React, { useState } from 'react';
 const Navbar = ( ) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   // const router = useRouter();
-  const currentRoute ="/";
+  const currentRoute ='/';
   console.log("uccrent role ",currentRoute);
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -67,7 +67,7 @@ const Navbar = ( ) => {
             </li>
             <li>
             <Link href="/aboutus">
-                <p className={`block py-2 px-3 rounded md:p-0 ${currentRoute === '/aboutus' ? 'bg-blue-700 text-white md:bg-transparent md:text-blue-700 md:dark:text-blue-500' : 'text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700'}`}>
+                <p className={`block py-2 px-3 rounded md:p-0 ${currentRoute === '/' ? 'bg-blue-700 text-white md:bg-transparent md:text-blue-700 md:dark:text-blue-500' : 'text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700'}`}>
                   About
                 </p>
               </Link>
