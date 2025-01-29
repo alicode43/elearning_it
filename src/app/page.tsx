@@ -144,47 +144,58 @@ export default function Home() {
 
 {/* Our Training Section */}
 
-<section className="h-[634px] relative bg-[#ccdcd9]/50  overflow-hidden">
-    <div className="left-[113px] top-[104px] absolute text-[#07a6f2] text-[58px] font-extrabold font-['Roboto']">Our Training Highlights</div>
-    <div className="w-[682px] left-[131px] top-[214px] absolute">
-        <div className="w-[655px] h-7 left-[27px] top-0 absolute text-black text-2xl font-normal font-['Roboto']">Job-Oriented Programs</div>
-        <div className="w-6 h-6 left-0 top-[2px] absolute flex-col justify-start items-start inline-flex overflow-hidden" />
-    </div>
-    <div className="w-[682px] left-[131px] top-[263px] absolute">
-        <div className="w-[655px] h-7 left-[27px] top-0 absolute text-black text-2xl font-normal font-['Roboto']">Real-Time Experienced Trainers</div>
-        <div className="w-6 h-6 left-0 top-[2px] absolute flex-col justify-start items-start inline-flex overflow-hidden" />
-    </div>
-    <div className="w-[682px] left-[131px] top-[312px] absolute">
-        <div className="w-[655px] h-7 left-[27px] top-0 absolute text-black text-2xl font-normal font-['Roboto']">Instructor-Led Live Classroom Sessions</div>
-        <div className="w-6 h-6 left-0 top-[2px] absolute flex-col justify-start items-start inline-flex overflow-hidden" />
-    </div>
-    <div className="w-[682px] left-[131px] top-[361px] absolute">
-        <div className="w-[655px] h-7 left-[27px] top-0 absolute text-black text-2xl font-normal font-['Roboto']">Hands-On Learning<br/></div>
-        <div className="w-6 h-6 left-0 top-[2px] absolute flex-col justify-start items-start inline-flex overflow-hidden" />
-    </div>
-    <div className="w-[682px] left-[131px] top-[410px] absolute">
-        <div className="w-[655px] h-7 left-[27px] top-0 absolute text-black text-2xl font-normal font-['Roboto']">Real-World Case Studies/ Projects</div>
-        <div className="w-6 h-6 left-0 top-[2px] absolute flex-col justify-start items-start inline-flex overflow-hidden" />
-    </div>
-    <div className="w-[682px] left-[131px] top-[459px] absolute">
-        <div className="w-[655px] h-7 left-[27px] top-0 absolute text-black text-2xl font-normal font-['Roboto']">Q & A Sessions and Latest Technology Updates<br/><br/></div>
-        <div className="w-6 h-6 left-0 top-[2px] absolute flex-col justify-start items-start inline-flex overflow-hidden" />
-    </div>
-    <div className="w-[682px] left-[131px] top-[508px] absolute">
-        <div className="w-[655px] h-7 left-[27px] top-0 absolute text-black text-2xl font-normal font-['Roboto']">Mock-Up Interviews & Placement Assistance<br/><br/></div>
-        <div className="w-6 h-6 left-0 top-[2px] absolute flex-col justify-start items-start inline-flex overflow-hidden" />
-    </div>
-    <div className="w-[456px] h-[456px] left-[882px] top-[104px] absolute">
+<section className="relative bg-[#ccdcd9]/50 overflow-hidden py-12">
+  <div className="container mx-auto px-4">
+    <h2 className="text-[#07a6f2] text-4xl md:text-5xl lg:text-6xl font-extrabold font-['Roboto'] text-center md:text-left mb-8">
+      Our Training Highlights
+    </h2>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="flex items-center">
+        <div className="text-black text-xl md:text-2xl font-normal font-['Roboto']">
+          Job-Oriented Programs
+        </div>
+      </div>
+      <div className="flex items-center">
+        <div className="text-black text-xl md:text-2xl font-normal font-['Roboto']">
+          Real-Time Experienced Trainers
+        </div>
+      </div>
+      <div className="flex items-center">
+        <div className="text-black text-xl md:text-2xl font-normal font-['Roboto']">
+          Instructor-Led Live Classroom Sessions
+        </div>
+      </div>
+      <div className="flex items-center">
+        <div className="text-black text-xl md:text-2xl font-normal font-['Roboto']">
+          Hands-On Learning
+        </div>
+      </div>
+      <div className="flex items-center">
+        <div className="text-black text-xl md:text-2xl font-normal font-['Roboto']">
+          Real-World Case Studies/ Projects
+        </div>
+      </div>
+      <div className="flex items-center">
+        <div className="text-black text-xl md:text-2xl font-normal font-['Roboto']">
+          Q & A Sessions and Latest Technology Updates
+        </div>
+      </div>
+      <div className="flex items-center">
+        <div className="text-black text-xl md:text-2xl font-normal font-['Roboto']">
+          Mock-Up Interviews & Placement Assistance
+        </div>
+      </div>
+      <div className="flex items-center justify-center md:col-span-2 lg:col-span-1">
         <Image
-        src="/Artwork.png"
-        width={500}
-        height={500}
-        alt="Picture of the author"
-      />
-     
-        
-     
+          src="/Artwork.png"
+          width={500}
+          height={500}
+          alt="Picture of the author"
+          className="rounded-lg"
+        />
+      </div>
     </div>
+  </div>
 </section>
 
 {/* Achivement section */}
