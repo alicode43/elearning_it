@@ -2,18 +2,21 @@
 import React, { useState } from 'react';
 import Sidebar from '@/components/Dashboard/sidebar';
 import StatsCard from '@/components/Dashboard/statusCard';
-import MyCourses from '@/components/Dashboard/myCourses';
-import { courses, stats } from './data';
-import { Bell } from 'lucide-react';
 import Setting from '@/components/Dashboard/setting';
-import { Home, BookOpen,  Settings } from 'lucide-react';
+import CoursesPage from '@/components/Dashboard/adminCourses';
+import AdminDashBoard from '@/components/Dashboard/AdminDashboard';
 
+import { stats } from './data';
+import { Bell } from 'lucide-react';
+import {  BookOpen, LayoutDashboard, Settings,  User} from "lucide-react";
 
 function App() {
   const [activeSection, setActiveSection] = useState('dashboard');
 
   const sections = [
-    { id: 'dashboard', label: 'Dashboard', icon: Home },
+    { id: 'Admin', label: 'Admin', icon: User },
+    { id: 'Dashboard', label: 'Dashboard', icon: LayoutDashboard },
+
     { id: 'courses', label: 'My Courses', icon: BookOpen },
     { id: 'settings', label: 'Settings', icon: Settings },
   ];
@@ -23,7 +26,8 @@ function App() {
       return (
         <>
           <h2 className="text-xl font-semibold mb-6">My Courses</h2>
-          <MyCourses courses={courses} />
+          {/* <CoursesPage courses={courses} /> */}
+          <CoursesPage  />
         </>
       );
     } 
@@ -36,8 +40,9 @@ function App() {
       return (
         <>
           <StatsCard stats={stats} />
-          <h2 className="text-xl font-semibold mt-8 sm:mt-10 mb-6">My Courses</h2>
-          <MyCourses courses={courses} />
+          <h2 className="text-xl font-semibold mt-8 sm:mt-10 mb-6">Admin Dashboard</h2>
+          {/* <MyCourses courses={courses} /> */}
+          < AdminDashBoard  />
         </>
       );
     }
@@ -45,7 +50,9 @@ function App() {
 
   return (
     <div className="flex flex-col lg:flex-row min-h-screen bg-gray-50">
-      <Sidebar activeSection={activeSection}  onNavigate={setActiveSection} sections={sections}  />
+     <div className='sticky '  >
+        <Sidebar activeSection={activeSection}  onNavigate={setActiveSection} sections={sections}   />
+        </div> 
       
       <main className="flex-1 p-4 sm:p-8 lg:pl-8 pt-20 lg:pt-8">
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8">
