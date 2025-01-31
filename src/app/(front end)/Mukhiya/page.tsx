@@ -31,9 +31,7 @@ function App() {
         </>
       );
     } 
-    // else if (activeSection === 'progress') {
-    //   return <h2 className="text-xl font-semibold">Progress (Coming Soon)</h2>;
-    // } 
+   
     else if (activeSection === 'settings') {
       return <h2 className="text-xl font-semibold"><Setting/></h2>;
     } else {
