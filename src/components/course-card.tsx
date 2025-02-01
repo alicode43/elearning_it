@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 interface CourseCardProps {
     title: string
     batchStatus: string
@@ -45,9 +47,14 @@ interface CourseCardProps {
           </div>
   
           {/* Button */}
-          <button className="w-fit px-6 py-2 bg-yellow-400 rounded-lg text-black font-medium hover:bg-yellow-300 transition-colors">
+          <Link href="/course" className="z-10">
+            <button className="w-fit px-6 py-2 bg-yellow-400 rounded-lg text-black font-medium hover:bg-yellow-300 transition-colors">
+              View Details
+            </button>
+          </Link>
+          {/* <button className="w-fit px-6 py-2 bg-yellow-400 rounded-lg text-black font-medium hover:bg-yellow-300 transition-colors">
             View Details
-          </button>
+          </button> */}
   
           {/* Decorative dots */}
           <div className="absolute bottom-6 left-6 grid grid-cols-6 gap-2">

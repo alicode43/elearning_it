@@ -6,9 +6,56 @@ import { Card } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { BookOpen, Code2, FileText, Infinity, LayoutGrid, PlayCircle, Star, Trophy } from "lucide-react"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
+import Script from "next/script"
+
+
+declare global {
+  interface Window {
+    Razorpay: any;
+  }
+}
 
 export default function CourseDetail() {
 //   const [activeTab, setActiveTab] = useState("overview")
+   const handlePayment=async()=>{
+      const AMOUNT=200;
+        try{
+            const resonse=await fetch("/api/create-order",{method:"POST"});
+            const data=await resonse.json();
+
+            const options={
+                key:process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID,
+                amount:AMOUNT*100,
+                currency:"INR",
+                name:"E Learning It",
+                description:"Test",
+                
+                order_id:data.orderId,
+                handler:(response: { razorpay_payment_id: string; razorpay_order_id: string; razorpay_signature: string })=>{
+                    console.log(response);
+                },
+                prefill:{
+                    name:"ali",
+                    email:"ali@elearningit.in",
+                    Contact:"9955447788"
+                
+                }, 
+                theme:{
+                    color:"#3399cc"
+                }
+                };
+
+                const rzp1=new window.Razorpay(options);
+                rzp1.open();
+        }
+        catch(err){
+            console.log(err);
+        }finally{
+            // setIsProcessing(false);
+        }
+
+
+    };
 
   return (
     <div className="min-h-screen bg-background">
@@ -73,8 +120,9 @@ export default function CourseDetail() {
                 </div>
                 <div className="p-6">
                   <div className="mb-6 text-center">
-                    <div className="mb-2 text-3xl font-bold">$89.99</div>
-                    <Button className="w-full" size="lg" variant="secondary">
+                    <div className="mb-2 text-3xl font-bold">100</div>
+                    <Script src="https://checkout.razorpay.com/v1/checkout.js"/>
+                    <Button className="w-full" size="lg" variant="secondary"onClick={handlePayment} >
                       Enroll Now
                     </Button>
                   </div>
