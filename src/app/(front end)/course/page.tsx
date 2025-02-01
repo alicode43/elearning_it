@@ -7,7 +7,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { BookOpen, Code2, FileText, Infinity, LayoutGrid, PlayCircle, Star, Trophy } from "lucide-react"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import Script from "next/script"
-
+import { useRouter } from 'next/navigation'
 
 declare global {
   interface Window {
@@ -16,6 +16,7 @@ declare global {
 }
 
 export default function CourseDetail() {
+  const router = useRouter();
 //   const [activeTab, setActiveTab] = useState("overview")
    const handlePayment=async()=>{
       const AMOUNT=200;
@@ -29,10 +30,12 @@ export default function CourseDetail() {
                 currency:"INR",
                 name:"E Learning It",
                 description:"Test",
-                
+               
+               
                 order_id:data.orderId,
                 handler:(response: { razorpay_payment_id: string; razorpay_order_id: string; razorpay_signature: string })=>{
                     console.log(response);
+                    router.push('/course/chapter');
                 },
                 prefill:{
                     name:"ali",
@@ -42,7 +45,9 @@ export default function CourseDetail() {
                 }, 
                 theme:{
                     color:"#3399cc"
-                }
+                },
+                // callback_url: 'http://localhost:3000/course/chapter',
+                // redirect: true,
                 };
 
                 const rzp1=new window.Razorpay(options);

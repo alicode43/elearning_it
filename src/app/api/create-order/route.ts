@@ -14,8 +14,10 @@ export async function POST(){
             amount:100*100,
             currency:"INR",
             receipt:"reciept_"+Math.random().toString(36).substring(7),
+            // callback_url: "",
             // notes
         });
+        console.log(order);
         return NextResponse.json({orderId:order.id},{status:200});
     }catch(err){
         console.log(err);
