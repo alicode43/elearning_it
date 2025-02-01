@@ -59,7 +59,7 @@ export default function CourseDetail() {
             const data=await resonse.json();
 
             const options={
-                key:process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID,
+                key:process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID || '',
                 amount:AMOUNT*100,
                 currency:"INR",
                 name:"E Learning It",
@@ -74,7 +74,7 @@ export default function CourseDetail() {
                 prefill:{
                     name:"ali",
                     email:"ali@elearningit.in",
-                    Contact:"9955447788"
+                    contact:"9955447788"
                 
                 }, 
                 theme:{
