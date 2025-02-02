@@ -56,11 +56,19 @@ export default function CourseOverview() {
         <div className="container mx-auto px-4 py-8">
           <Tabs defaultValue="overview" className="space-y-8">
             <TabsList>
+
+              <TabsTrigger value="courseContent" className="md:hidden flex">Course Content </TabsTrigger>
               <TabsTrigger value="overview">Overview</TabsTrigger>
               <TabsTrigger value="content">Content</TabsTrigger>
               <TabsTrigger value="reviews">Reviews</TabsTrigger>
               <TabsTrigger value="learning">Learning Tools</TabsTrigger>
             </TabsList>
+
+            <TabsContent value="courseContent" className="space-y-8">
+              {/* Schedule Learning Time */}
+            <Sidebar/>
+
+            </TabsContent>
 
             <TabsContent value="overview" className="space-y-8">
               {/* Schedule Learning Time */}
@@ -126,7 +134,10 @@ export default function CourseOverview() {
       </div>
 
       {/* Course Content Sidebar */}
-      <Sidebar />
+      <div className="md:block hidden">
+
+      <Sidebar  />
+      </div>
   
     </div>
   )
