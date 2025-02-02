@@ -144,48 +144,25 @@ export default function Home() {
 
 {/* Our Training Section */}
 
-<section className="relative bg-[#ccdcd9]/50 overflow-hidden py-12">
-  <div className="container mx-auto px-4">
+<section className="relative bg-[#ccdcd9]/50  flex  justify-center py-16">
+  <div className="container mx-auto px-4 w-11/12">
     <h2 className="text-[#07a6f2] text-4xl md:text-5xl lg:text-6xl font-extrabold font-['Roboto'] text-center md:text-left mb-8">
       Our Training Highlights
     </h2>
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <div className="flex items-center">
-        <div className="text-black text-xl md:text-2xl font-normal font-['Roboto']">
-          Job-Oriented Programs
-        </div>
+    <div className="grid grid-cols-1 md:grid-cols-2  gap-8">
+      <div className="text-black text-xl md:text-2xl font-normal font-['Roboto'] flex flex-col gap-4">
+        <p>  Job-Oriented Programs</p>
+        <p>     Real-Time Experienced Trainers</p>
+        <p>    Instructor-Led Live Classroom Sessions</p>
+        <p>      Hands-On Learning</p>
+        <p>        Real-World Case Studies/ Projects</p>
+        <p>        Q & A Sessions and Latest Technology Updates</p>
+        <p>           Mock-Up Interviews & Placement Assistance</p>
+     
       </div>
-      <div className="flex items-center">
-        <div className="text-black text-xl md:text-2xl font-normal font-['Roboto']">
-          Real-Time Experienced Trainers
-        </div>
-      </div>
-      <div className="flex items-center">
-        <div className="text-black text-xl md:text-2xl font-normal font-['Roboto']">
-          Instructor-Led Live Classroom Sessions
-        </div>
-      </div>
-      <div className="flex items-center">
-        <div className="text-black text-xl md:text-2xl font-normal font-['Roboto']">
-          Hands-On Learning
-        </div>
-      </div>
-      <div className="flex items-center">
-        <div className="text-black text-xl md:text-2xl font-normal font-['Roboto']">
-          Real-World Case Studies/ Projects
-        </div>
-      </div>
-      <div className="flex items-center">
-        <div className="text-black text-xl md:text-2xl font-normal font-['Roboto']">
-          Q & A Sessions and Latest Technology Updates
-        </div>
-      </div>
-      <div className="flex items-center">
-        <div className="text-black text-xl md:text-2xl font-normal font-['Roboto']">
-          Mock-Up Interviews & Placement Assistance
-        </div>
-      </div>
-      <div className="flex items-center justify-center md:col-span-2 lg:col-span-1">
+      
+
+      <div >
         <Image
           src="/Artwork.png"
           width={500}
@@ -197,6 +174,21 @@ export default function Home() {
     </div>
   </div>
 </section>
+
+{/* Trending sectopm */}
+
+<div className=" bg-sky-200 p-6 md:p-12">
+      <h1 className="mb-12 text-center text-4xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400 md:text-5xl">
+        Trending IT & Software Courses
+      </h1>
+
+      <div className="grid grid-cols-1 gap-16 md:grid-cols-2 lg:grid-cols-3">
+        {courses.map((course, index) => (
+          <CourseCard key={index} title={course.title} rating={course.rating} />
+        ))}
+      </div>
+    </div>
+
 
 {/* Achivement section */}
 
@@ -281,19 +273,7 @@ export default function Home() {
       </div>
     </section>
 
-{/* Trending sectopm */}
 
- <div className=" bg-sky-200 p-6 md:p-12">
-      <h1 className="mb-12 text-center text-4xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400 md:text-5xl">
-        Trending IT & Software Courses
-      </h1>
-
-      <div className="grid grid-cols-1 gap-16 md:grid-cols-2 lg:grid-cols-3">
-        {courses.map((course, index) => (
-          <CourseCard key={index} title={course.title} rating={course.rating} />
-        ))}
-      </div>
-    </div>
 
 
 {/* Enrollment form */}
