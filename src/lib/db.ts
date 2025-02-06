@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 
 
-const DB_URL=process.env.MONGODB_URL!;
+const DB_URL=process.env.NEXT_PUBLIC_MONGODB_URL!;
 console.log(DB_URL);
 if(!DB_URL){
     throw new Error("MONGODB_URL not provided , Please Provide a URL in env");
