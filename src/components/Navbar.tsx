@@ -1,13 +1,20 @@
 "use client"
 // import Link from 'next/link';
 import Link from 'next/link';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 // import { useRouter } from 'next/navigation';
 const Navbar = ( ) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  // const router = useRouter();
-  const currentRoute ='/';
-  console.log("uccrent role ",currentRoute);
+  const [currentRoute, setCurrentRoute] = useState('');
+  const router = window.location.pathname ;
+  console.log( window.location.pathname );
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setCurrentRoute(window.location.pathname );
+    }
+  }, [router]);
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -59,43 +66,39 @@ const Navbar = ( ) => {
         >
           <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
             <li>
-            <Link href="/">
+              <Link href="/">
                 <p className={`block py-2 px-3 rounded md:p-0 ${currentRoute === '/' ? 'bg-blue-700 text-white md:bg-transparent md:text-blue-700 md:dark:text-blue-500' : 'text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700'}`} aria-current="page">
                   Home
                 </p>
               </Link>
             </li>
             <li>
-            <Link href="/aboutus">
-                <p className={`block py-2 px-3 rounded md:p-0 ${currentRoute === '/' ? 'bg-blue-700 text-white md:bg-transparent md:text-blue-700 md:dark:text-blue-500' : 'text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700'}`}>
+              <Link href="/aboutus">
+                <p className={`block py-2 px-3 rounded md:p-0 ${currentRoute === '/aboutus' ? 'bg-blue-700 text-white md:bg-transparent md:text-blue-700 md:dark:text-blue-500' : 'text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700'}`}>
                   About
                 </p>
               </Link>
             </li>
             <li>
-              <a
-                href="/courses"
-                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-              >
-               Courses
-              </a>
+              <Link href="/courses">
+                <p className={`block py-2 px-3 rounded md:p-0 ${currentRoute === '/courses' ? 'bg-blue-700 text-white md:bg-transparent md:text-blue-700 md:dark:text-blue-500' : 'text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700'}`}>
+                  Courses
+                </p>
+              </Link>
             </li>
             <li>
-          
-              <a
-                href="/blogs"
-                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-              >
-                Blog
-              </a>
+              <Link href="/blogs">
+                <p className={`block py-2 px-3 rounded md:p-0 ${currentRoute === '/blogs' ? 'bg-blue-700 text-white md:bg-transparent md:text-blue-700 md:dark:text-blue-500' : 'text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700'}`}>
+                  Blog
+                </p>
+              </Link>
             </li>
             <li>
-              <a  
-                href="contactus"
-                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-              >
-                Contact
-              </a>
+              <Link href="/contactus">
+                <p className={`block py-2 px-3 rounded md:p-0 ${currentRoute === '/contactus' ? 'bg-blue-700 text-white md:bg-transparent md:text-blue-700 md:dark:text-blue-500' : 'text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700'}`}>
+                  Contact
+                </p>
+              </Link>
             </li>
           </ul>
         </div>

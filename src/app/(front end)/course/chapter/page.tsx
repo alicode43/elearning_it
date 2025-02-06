@@ -54,7 +54,7 @@ export default function CourseOverview() {
         </div>
 
         <div className="container mx-auto px-4 py-8">
-          <Tabs defaultValue="overview" className="space-y-8">
+          <Tabs  className="space-y-8">
             <TabsList>
 
               <TabsTrigger value="courseContent" className="md:hidden flex">Course Content </TabsTrigger>
