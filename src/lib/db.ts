@@ -37,7 +37,7 @@ cached.conn=await cached.promise;
   }catch(err){
         cached.conn=null;
         console.log(err);
-        throw new Error("Error 123  in connecting to database");
+        throw new Error("Error 123in connecting to database");
   }
   console.log(cached.conn);
   return cached.conn;
