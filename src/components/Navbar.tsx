@@ -8,7 +8,7 @@ const Navbar = () => {
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      setCurrentRoute(window.location.pathname);I'm getting.
+      setCurrentRoute(window.location.pathname);
     }
   }, []);
 
