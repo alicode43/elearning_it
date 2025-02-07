@@ -64,51 +64,12 @@ export default function page() {
 
 {/* About Us */}
 
-{/* <section className="w-[1436px] h-[1186px] relative bg-[#505050]/5  overflow-hidden">
-    <div className="w-[1186px] h-[76px] left-[165px] top-[264px] absolute text-[#2196f3] text-[32px] font-extrabold font-['Roboto']">We aim to bring out conscious thinking in the students to solve the critical real-world challenges.</div>
-    <div className="w-[770px] h-[113px] left-[163px] top-[373px] absolute text-justify text-black text-[22px] font-normal font-['Roboto']">We provide online accelerator programs that effectively enhance the coding skills of students to help launch their career as successful software professionals. Our accelerator programs are designed to help students learn the necessary coding skills and life skills to be successful in the software industry.</div>
-    <div className="w-[770px] h-[92px] left-[164px] top-[527px] absolute text-justify text-black text-[22px] font-normal font-['Roboto']">We offer a variety of courses that cover the different aspects of coding, including programming languages, software development tools, and software development methodologies. We also provide a mentorship program that pairs students with experienced software professionals to help them transition into the industry.</div>
-    <div className="w-[791px] h-[57px] left-[165px] top-[660px] absolute text-justify text-black text-[22px] font-normal font-['Roboto']">Traditional quant skills are no longer enough to deal with the latest challenges in the real-world. We need to learn new technologies like Machine Learning to solve these challenges in smarter ways.</div>
-    <div className="w-[798px] h-44 left-[163px] top-[758px] absolute text-justify text-black text-[22px] font-normal font-['Roboto']">Today, Machine learning is everywhere around us. We use machine learning every day in our lives, such as spam filters in emails, the recommendations in search engines, language translation services in web browsers and digital devices, chatbots, and digital assistants, and fraud detection systems on finance and banking. We are a team of experts who came from the technology background and been through AI application developments and in designing complex AI programs.</div>
-    <div className="left-[165px] top-[139px] absolute text-[#07a6f2] text-[58px] font-extrabold font-['Roboto']">About Us</div>
-    <div className="w-[237px] h-[49px] px-[31px] py-[21px] left-[163px] top-[972px] absolute bg-[#ffc00c] rounded-lg justify-center items-center gap-2.5 inline-flex overflow-hidden">
-        <div className="text-black text-2xl font-medium font-['Roboto']">Get in Touch</div>
-    </div>
-</section> */}
-
-
-
-{/* dscdscdscdsc
-dsc
-dsc
-dsc
-dsc
-dsc
-sdcds */}
 
 
 
 <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      {/* <div className="relative overflow-hidden bg-gradient-to-r from-indigo-600 to-indigo-800 py-24">
-        <div className="absolute inset-0">
-          <img
-            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=2000&q=80"
-            alt="Team collaboration"
-            className="h-full w-full object-cover opacity-20"
-          />
-        </div>
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl">
-              About Us
-            </h1>
-            <p className="mx-auto mt-6 max-w-2xl text-xl text-indigo-100">
-              We're a team of passionate individuals dedicated to creating exceptional digital experiences that make a difference.
-            </p>
-          </div>
-        </div>
-      </div> */}
+     
 
       {/* Story Section */}
       <div className="bg-white py-16 sm:py-24">
@@ -155,9 +116,7 @@ sdcds */}
         </div>
       </div>
 
-{/* 
-cscdscdscdsc
-scsc */}
+
 
 
 

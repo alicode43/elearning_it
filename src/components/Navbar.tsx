@@ -1,19 +1,16 @@
 "use client"
-// import Link from 'next/link';
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
-// import { useRouter } from 'next/navigation';
-const Navbar = ( ) => {
+
+const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [currentRoute, setCurrentRoute] = useState('');
-  const router = window.location.pathname ;
-  console.log( window.location.pathname );
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      setCurrentRoute(window.location.pathname );
+      setCurrentRoute(window.location.pathname);I'm getting.
     }
-  }, [router]);
+  }, []);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
