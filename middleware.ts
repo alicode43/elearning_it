@@ -1,5 +1,5 @@
 import withAuth from "next-auth/middleware"
-import { defaultConfig } from "next/dist/server/config-shared"
+
 
 import { NextResponse } from "next/server"
 
@@ -9,19 +9,19 @@ export default withAuth(
         return NextResponse.next()
 
     },
-    callbacks:{
+    {callbacks:{
         authorized:({token,req})=>{
             const {pathname}=req.nextUrl;
             if(
                 pathname==="/" ||
-                pathname.startWith("/api/auth") ||
+                pathname.startsWith("/api/auth") ||
                 pathname==="/register"||
-                pathname==="/login"||
+                pathname==="/login"
             
             ){
                 return  true;
             }
-            if(pathname.startWith("/api/videos"){
+            if(pathname.startsWith("/api/videos")){
                 return true;
             }
 
@@ -30,6 +30,7 @@ export default withAuth(
 
             }
         }
+    
     }
 )
 export const config={
